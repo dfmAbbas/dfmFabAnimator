@@ -1,6 +1,6 @@
 ## FabAnimator 
 [![](https://jitpack.io/v/okabbas/FabAnimator.svg)](https://jitpack.io/#okabbas/FabAnimator)
-[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)]()
+[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/okabbas/FabAnimator)
 
 This library is for adding smooth animation and animators to the FloatingActionButton library android.
 
@@ -9,21 +9,19 @@ This library is for adding smooth animation and animators to the FloatingActionB
 
 
 ## Getting Started :
-Add to your root build.gradle:
+Add to your root build.gradle :
 ```Groovy
-allprojects {
-	repositories {
-    maven { url "https://jitpack.io" }
-    ...
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
 	}
-}
 ```
 
-Add the dependency:
+Add the dependency :
 ```Groovy
 dependencies {
-    compile 'com.github.okabbas:FabAnimator:0.9.2'
-    //or 
     implementation 'com.github.okabbas:FabAnimator:0.9.2'
 }
 ```
@@ -32,7 +30,6 @@ dependencies {
 
 ##### In `Kotlin`:
 ```Groovy
-//Create an instance of the AnimatorObject class and inject FAB into it.
 val animatorObject = AnimatorObject(fab_1)
 
 animatorObject.createAnimator() //To start animations by default
@@ -44,7 +41,6 @@ animatorObject.stopAnimator() //To stop animations by default
 
 ##### In `Java` :
 ```Groovy
-  //Create an instance of the AnimatorObject class and inject FAB into it.
   AnimatorObject animatorObject = new AnimatorObject(fab_1);
   
   AnimatorObject.createAnimator(ColorModel.Background,
@@ -53,19 +49,15 @@ animatorObject.stopAnimator() //To stop animations by default
   AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //To stop animations by default
 ```
 
-## Advanced API
+## Advanced API :
 
 ##### In `Kotlin`:
-
-###### To learn more about different examples, read the following file code.
 ###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
 
 ##### In `Java`:
-###### To learn more about different examples, read the following file code.
 ###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
 
 ## License
-
     MIT License
 
     Copyright (c) 2018 Abbas Naghdi
