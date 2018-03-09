@@ -5,7 +5,7 @@
 This library is for adding smooth animation and animators to the FloatingActionButton library android.
 
 
-<img src="assets/sample.gif">
+<img src="assets/kotlin.gif"> <img src="assets/java.gif">
 
 
 ## Getting Started :
@@ -19,10 +19,10 @@ allprojects {
   }
 ```
 
-Add the dependency :
+Add the dependency : [![](https://jitpack.io/v/okabbas/FabAnimator.svg)](https://jitpack.io/#okabbas/FabAnimator)
 ```Groovy
 dependencies {
-    implementation 'com.github.okabbas:FabAnimator:0.9.2'
+    implementation 'com.github.okabbas:FabAnimator:0.9.2' 
 }
 ```
 
