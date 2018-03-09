@@ -41,12 +41,12 @@ animatorObject.stopAnimator() //To stop animations by default
 
 ##### In `Java` :
 ```Groovy
-  AnimatorObject animatorObject = new AnimatorObject(fab_1);
+AnimatorObject animatorObject = new AnimatorObject(fab_1);
   
-  AnimatorObject.createAnimator(ColorModel.Background,
-  AnimModel.None, 300, new int[]{Color.MAGENTA, Color.RED}); //To start animations by default
+AnimatorObject.createAnimator(ColorModel.Background,
+AnimModel.None, 300, new int[]{Color.MAGENTA, Color.RED}); //To start animations by default
 
-  AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //To stop animations by default
+AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //To stop animations by default
 ```
 
 ## Advanced API :
@@ -55,7 +55,7 @@ animatorObject.stopAnimator() //To stop animations by default
 ###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
 
 ##### In `Java`:
-###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/java.kt).
+###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/java.java).
 
 ## License
     MIT License
