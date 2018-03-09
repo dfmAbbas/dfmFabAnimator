@@ -19,7 +19,8 @@ allprojects {
   }
 ```
 
-Add the dependency : [![](https://jitpack.io/v/okabbas/FabAnimator.svg)](https://jitpack.io/#okabbas/FabAnimator)
+Add the dependency : 
+[![](https://jitpack.io/v/okabbas/FabAnimator.svg)](https://jitpack.io/#okabbas/FabAnimator)
 ```Groovy
 dependencies {
     implementation 'com.github.okabbas:FabAnimator:0.9.2' 
