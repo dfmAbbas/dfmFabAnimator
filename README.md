@@ -11,12 +11,12 @@ This library is for adding smooth animation and animators to the FloatingActionB
 ## Getting Started :
 Add to your root build.gradle :
 ```Groovy
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+    }
+  }
 ```
 
 Add the dependency :
@@ -55,7 +55,7 @@ animatorObject.stopAnimator() //To stop animations by default
 ###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
 
 ##### In `Java`:
-###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
+###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/java.kt).
 
 ## License
     MIT License
