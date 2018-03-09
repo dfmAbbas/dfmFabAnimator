@@ -27,7 +27,7 @@
 
             <fragment
                 android:id="@+id/kotlin"
-                class="com.github.okabbas.FabAnimatorSample.kotlin"
+                class="com.github.okabbas.FabAnimator.Sample.kotlin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
@@ -58,7 +58,7 @@
 
             <fragment
                 android:id="@+id/java"
-                class="com.github.okabbas.FabAnimatorSample.java"
+                class="com.github.okabbas.FabAnimator.Sample.java"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

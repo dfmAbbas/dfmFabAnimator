@@ -7,5 +7,7 @@ class main : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //added fragment in xml R.layout.activity_main
     }
 }

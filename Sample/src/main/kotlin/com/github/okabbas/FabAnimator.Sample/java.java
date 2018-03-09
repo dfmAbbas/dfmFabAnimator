@@ -16,8 +16,8 @@ import com.github.okabbas.FabAnimator.anim.AnimModel;
 import com.github.okabbas.FabAnimator.color.ColorModel;
 import com.github.okabbas.FabAnimator.handler.AnimatorObject;
 
-
 public class java extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_java, container, false);

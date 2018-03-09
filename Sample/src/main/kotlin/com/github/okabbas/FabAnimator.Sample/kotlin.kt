@@ -19,28 +19,46 @@ class kotlin : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val object1 = AnimatorObject(fab_1)
-        val object2 = AnimatorObject(fab_2)
-        val object3 = AnimatorObject(fab_3)
-        val object4 = AnimatorObject(fab_4)
-        val object5 = AnimatorObject(fab_5)
+        
+        val animatorObject1 = AnimatorObject(fab_1)
+        val animatorObject2 = AnimatorObject(fab_2)
+        val animatorObject3 = AnimatorObject(fab_3)
+        val animatorObject4 = AnimatorObject(fab_4)
+        val animatorObject5 = AnimatorObject(fab_5)
 
         btn_start.setOnClickListener {
-            object1.createAnimator(colorModel = ColorModel.Icon,
+            /*
+                Using the createAnimator method, you can set what you need
+                The createAnimator method has default values, and if you do not enter these values,
+                these values will be imported into kotlin by default and auto.
+            */
+
+            //Here we will only change the FAB icon color.
+            animatorObject1.createAnimator(colorModel = ColorModel.Icon,
                     colorRange = intArrayOf(Color.WHITE, Color.YELLOW))
-            object2.createAnimator(animModel = AnimModel.Alpha)
-            object3.createAnimator(animModel = AnimModel.Scale)
-            object4.createAnimator(duration = 300)
-            object5.createAnimator(colorRange = intArrayOf(Color.DKGRAY, Color.MAGENTA))
+
+            //Here we change the color of the FAB background.
+            animatorObject2.createAnimator(animModel = AnimModel.Alpha)
+            animatorObject3.createAnimator(animModel = AnimModel.Scale)
+            animatorObject4.createAnimator(duration = 300)
+            animatorObject5.createAnimator(colorRange = intArrayOf(Color.DKGRAY, Color.MAGENTA))
         }
 
         btn_stop.setOnClickListener {
-            object1.stopAnimator(colorModel = ColorModel.Icon)
-            object2.stopAnimator()
-            object3.stopAnimator()
-            object4.stopAnimator()
-            object5.stopAnimator()
+
+            // When the AnimatorObject is finished, we must stop using the stopAnimator method.
+
+            /* Here the animatorObject1 is said to have stopped
+              and this class has already done the job of changing the color of the icons,
+              and we also set the background color of the FAB after the end of the job.
+             */
+            animatorObject1.stopAnimator(colorModel = ColorModel.Icon)
+
+            //and here we use default values
+            animatorObject2.stopAnimator()
+            animatorObject3.stopAnimator()
+            animatorObject4.stopAnimator()
+            animatorObject5.stopAnimator()
         }
     }
 }
