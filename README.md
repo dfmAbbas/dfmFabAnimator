@@ -27,36 +27,49 @@ dependencies {
 }
 ```
 
-## Simple API :
+## Simple API (default) :
 
 ##### In `Kotlin`:
 ```Groovy
-val animatorObject = AnimatorObject(fab_1)
+val animatorObject1 = AnimatorObject()
+animatorObject1.create(fab_1);
+animatorObject1.setColoring() //optional
+animatorObject1.setAnimation() //optional
 
-animatorObject.createAnimator() //for start animations by default
+//for start
+animatorObject1.start()
 
-animatorObject.stopAnimator() //for stop animations by default
+//for stop
+animatorObject1.stopColoring() //optional
+animatorObject1.stopAnimation() //optional
 
 //So easy :) I love Kotlin :)
+
 ```
 
 ##### In `Java` :
 ```Groovy
-AnimatorObject animatorObject = new AnimatorObject(fab_1);
-  
-AnimatorObject.createAnimator(ColorModel.Background,
-AnimModel.None, 300, new int[]{Color.MAGENTA, Color.RED}); //for start animations by default
+AnimatorObject animatorObject1 = new AnimatorObject();
+animatorObject1.create(fab_1);
+animatorObject1.setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA}); //optional
+animatorObject1.setAnimation(AnimModel.SHAKE, 800); //optional
 
-AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //for stop animations by default
+//for start
+animatorObject1.start();
+
+//for stop
+animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA); //optional
+animatorObject1.stopAnimation(); //optional
+
 ```
 
 ## Advanced API :
 
 ##### In `Kotlin`:
-###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/KotlinView.kt).
+###### [Sample code written with Katlin](Sample/src/main/java/com/github/okabbas/FabAnimator/Sample/KotlinView.kt).
 
 ##### In `Java`:
-###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/java.java).
+###### [Sample code written with Java](Sample/src/main/java/com/github/okabbas/FabAnimator/Sample/JavaView.java).
 
 ## License
     MIT License

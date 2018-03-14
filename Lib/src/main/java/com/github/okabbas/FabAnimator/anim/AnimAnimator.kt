@@ -40,8 +40,8 @@ internal class AnimAnimator(private val duration: Long) {
     }
 
     internal fun playShakeAnim(fab: FloatingActionButton): ValueAnimator {
-        val valueAnimator = ValueAnimator.ofFloat(fab.scaleX, fab.scaleX + 0.10F,
-                fab.scaleX - 0.10F, fab.scaleX + 0.07F, fab.scaleX - 0.07F)
+        val valueAnimator = ValueAnimator.ofFloat(fab.scaleX, fab.scaleX + 0.1F, fab.scaleX
+                , fab.scaleX + 0.1F, fab.scaleX)
 
         valueAnimator.addUpdateListener {
             fab.scaleX = it.animatedValue as Float

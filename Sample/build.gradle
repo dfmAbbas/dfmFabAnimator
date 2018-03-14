@@ -6,8 +6,8 @@ def mini_api = 15
 def compile_api = 27
 def target_api = 27
 def build_api = '27.0.3'
-def version_code = 100
-def version_name = '1.0.0'
+def version_code = 101
+def version_name = '1.0.1'
 def support_lib = '27.1.0'
 
 android {
