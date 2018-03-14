@@ -23,7 +23,7 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.okabbas:FabAnimator:0.9.2' 
+    implementation 'com.github.okabbas:FabAnimator:1.0.1'
 }
 ```
 
