@@ -45,7 +45,6 @@
         app:cardElevation="20dp">
 
         <android.support.v7.widget.LinearLayoutCompat
-            android:id="@+id/linjava"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -57,14 +56,12 @@
                 android:text="Java"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
-            <!--<fragment-->
-            <!--android:id="@JavaSamplejava"-->
-            <!--clacom.github.okabbas.FabAnimator.Sample.JavaSampleSamplejava"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent" />-->
+            <fragment
+                android:id="@+id/java"
+                class="com.github.okabbas.FabAnimator.Sample.JavaView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </android.support.v7.widget.LinearLayoutCompat>
-
     </android.support.v7.widget.CardView>
-
 </android.support.v7.widget.LinearLayoutCompat>

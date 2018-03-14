@@ -39,27 +39,7 @@ internal class AnimAnimator(private val duration: Long) {
         return valueAnimator
     }
 
-    //developing
-    internal fun playtest1(fab: FloatingActionButton): ValueAnimator {
-        val scale = fab.scaleX
-
-        val valueAnimator = ValueAnimator.ofFloat(scale, scale + 0.2F)
-
-        valueAnimator.addUpdateListener {
-            fab.scaleX = it.animatedValue as Float
-            fab.scaleY = it.animatedValue as Float
-        }
-
-        valueAnimator.repeatCount = ValueAnimator.INFINITE
-        valueAnimator.repeatMode = ValueAnimator.REVERSE
-        valueAnimator.interpolator = AccelerateInterpolator(3F)
-        valueAnimator.duration = duration
-
-        return valueAnimator
-    }
-
-    //developing
-    internal fun playtest2(fab: FloatingActionButton): ValueAnimator {
+    internal fun playShakeAnim(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofFloat(fab.scaleX, fab.scaleX + 0.10F,
                 fab.scaleX - 0.10F, fab.scaleX + 0.07F, fab.scaleX - 0.07F)
 
@@ -76,7 +56,7 @@ internal class AnimAnimator(private val duration: Long) {
         return valueAnimator
     }
 
-    fun stopAnimation(fab: FloatingActionButton) {
+    internal fun stopAnimation(fab: FloatingActionButton) {
         fab.clearAnimation()
     }
 }

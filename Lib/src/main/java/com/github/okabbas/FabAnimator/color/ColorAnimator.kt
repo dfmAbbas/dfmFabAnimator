@@ -7,8 +7,6 @@ import android.support.design.widget.FloatingActionButton
 
 
 internal class ColorAnimator(private val duration: Long, private val colorRange: IntArray) {
-
-    //This is a method to change the background color with the Smooth model
     internal fun playBgTint(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofObject(ArgbEvaluator(), *colorRange.toTypedArray())
 
@@ -23,7 +21,6 @@ internal class ColorAnimator(private val duration: Long, private val colorRange:
         return valueAnimator
     }
 
-    //This is a method to change the ICON color with the Smooth model
     internal fun playIconTint(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofObject(ArgbEvaluator(), *colorRange.toTypedArray())
 

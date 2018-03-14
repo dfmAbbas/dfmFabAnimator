@@ -33,7 +33,7 @@ class AnimatorObject {
         valueAnim = when (animModel) {
             JUMP -> animAnimator?.playJumpAnim(fabAnimator!!)
             BLINKER -> animAnimator?.playBlinkerAnim(fabAnimator!!)
-            SHAKE -> animAnimator?.playtest1(fabAnimator!!)
+            SHAKE -> animAnimator?.playShakeAnim(fabAnimator!!)
         }
     }
 
