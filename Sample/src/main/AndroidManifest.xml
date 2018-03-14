@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ico_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.github.okabbas.FabAnimator.Sample.main">
+        <activity android:name="com.github.okabbas.FabAnimator.Sample.MainView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

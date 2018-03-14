@@ -33,9 +33,9 @@ dependencies {
 ```Groovy
 val animatorObject = AnimatorObject(fab_1)
 
-animatorObject.createAnimator() //To start animations by default
+animatorObject.createAnimator() //for start animations by default
 
-animatorObject.stopAnimator() //To stop animations by default
+animatorObject.stopAnimator() //for stop animations by default
 
 //So easy :) I love Kotlin :)
 ```
@@ -45,15 +45,15 @@ animatorObject.stopAnimator() //To stop animations by default
 AnimatorObject animatorObject = new AnimatorObject(fab_1);
   
 AnimatorObject.createAnimator(ColorModel.Background,
-AnimModel.None, 300, new int[]{Color.MAGENTA, Color.RED}); //To start animations by default
+AnimModel.None, 300, new int[]{Color.MAGENTA, Color.RED}); //for start animations by default
 
-AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //To stop animations by default
+AnimatorObject.stopAnimator(ColorModel.Background, Color.BLACK); //for stop animations by default
 ```
 
 ## Advanced API :
 
 ##### In `Kotlin`:
-###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/kotlin.kt).
+###### [Sample code written with Katlin](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/KotlinView.kt).
 
 ##### In `Java`:
 ###### [Sample code written with Java](Sample/src/main/kotlin/com/github/okabbas/FabAnimator.Sample/java.java).

@@ -2,12 +2,14 @@ package com.github.okabbas.FabAnimator.Sample
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
-class main : AppCompatActivity() {
+
+class MainView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //added fragment in xml R.layout.activity_main
+        supportFragmentManager.beginTransaction().add(linjava.id, JavaView()).commit()
     }
 }
