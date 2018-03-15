@@ -14,8 +14,7 @@ Add to your root build.gradle :
 ```Groovy
 allprojects {
   repositories {
-    ...
-    maven { url 'https://jitpack.io' }
+      maven { url 'https://jitpack.io' } // add this line to repositories 
     }
   }
 ```
@@ -23,7 +22,7 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.okabbas:FabAnimator:1.0.1'
+    implementation 'com.github.okabbas:FabAnimator:1.0.2'
 }
 ```
 
@@ -32,17 +31,18 @@ dependencies {
 ##### In `Kotlin`:
 ```Groovy
 val animatorObject1 = AnimatorObject()
-animatorObject1.create(fab_1);
-animatorObject1.setColoring() //optional
-animatorObject1.setAnimation() //optional
-
-//for start
-animatorObject1.start()
-
+ 
+//for config and start
+animatorObject1.create(fab_1)
+        .setColoring() // if needed & optional
+        .setAnimation() // if needed & optional
+        .start()
+ 
 //for stop
 animatorObject1.stopColoring() //optional
-animatorObject1.stopAnimation() //optional
-
+        .stopAnimation() // if needed & optional
+        .stopColoring() // if needed & optional
+ 
 //So easy :) I love Kotlin :)
 
 ```
@@ -50,17 +50,17 @@ animatorObject1.stopAnimation() //optional
 ##### In `Java` :
 ```Groovy
 AnimatorObject animatorObject1 = new AnimatorObject();
-animatorObject1.create(fab_1);
-animatorObject1.setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA}); //optional
-animatorObject1.setAnimation(AnimModel.SHAKE, 800); //optional
-
-//for start
-animatorObject1.start();
-
+ 
+//for config and start
+animatorObject1.create(fab_1)
+        .setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA})
+        .setAnimation(AnimModel.SHAKE, 800)
+        .start();
+ 
 //for stop
-animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA); //optional
-animatorObject1.stopAnimation(); //optional
-
+animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
+        .stopAnimation()
+        .stopColoring();
 ```
 
 ## Advanced API :

@@ -28,31 +28,31 @@ class KotlinView : Fragment() {
 
         btn_start.setOnClickListener {
             animatorObject1.create(fab_1)
-            animatorObject1.setColoring(colorRange = intArrayOf(Color.BLACK, Color.LTGRAY, Color.MAGENTA), duration = 1500)
-            animatorObject1.setAnimation(animModel = AnimModel.SHAKE)
-            animatorObject1.start()
+                    .setColoring(colorRange = intArrayOf(Color.BLACK, Color.LTGRAY, Color.MAGENTA), duration = 1500)
+                    .setAnimation(animModel = AnimModel.SHAKE)
+                    .start()
 
             animatorObject2.create(fab_2)
-            animatorObject2.setColoring(duration = 400)
-            animatorObject2.start()
+                    .setColoring(duration = 400)
+                    .start()
 
             animatorObject3.create(fab_3)
-            animatorObject3.setAnimation(AnimModel.JUMP, 800)
-            animatorObject3.start()
+                    .setAnimation(AnimModel.JUMP, 800)
+                    .start()
 
             animatorObject4.create(fab_4)
-            animatorObject4.setColoring(ColorModel.ICON, 400, colorRange = intArrayOf(Color.WHITE, Color.BLACK))
-            animatorObject4.start()
+                    .setColoring(ColorModel.ICON, 400, colorRange = intArrayOf(Color.WHITE, Color.BLACK))
+                    .start()
 
             animatorObject5.create(fab_5)
-            animatorObject5.setColoring(colorRange = intArrayOf(Color.MAGENTA, Color.BLACK))
-            animatorObject5.setAnimation(animModel = AnimModel.BLINKER)
-            animatorObject5.start()
+                    .setColoring(colorRange = intArrayOf(Color.MAGENTA, Color.BLACK))
+                    .setAnimation(animModel = AnimModel.BLINKER)
+                    .start()
         }
 
         btn_stop.setOnClickListener {
             animatorObject1.stopColoring()
-            animatorObject1.stopAnimation()
+                    .stopAnimation()
 
             animatorObject2.stopColoring(colorOperation = Color.BLACK)
 
@@ -61,7 +61,7 @@ class KotlinView : Fragment() {
             animatorObject4.stopColoring(colorModel = ColorModel.ICON)
 
             animatorObject5.stopColoring()
-            animatorObject5.stopAnimation()
+                    .stopAnimation()
         }
     }
 }

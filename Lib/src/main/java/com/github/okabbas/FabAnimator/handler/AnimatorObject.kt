@@ -20,12 +20,14 @@ class AnimatorObject {
 
     private lateinit var correctedRange: IntArray
 
-    fun create(fab: FloatingActionButton) {
+    fun create(fab: FloatingActionButton): AnimatorObject {
         fabAnimator = fab
+
+        return this
     }
 
-    fun setAnimation(animModel: AnimModel = JUMP, duration: Long = 800) {
-        valueAnim?.let { if (it.isRunning) return }
+    fun setAnimation(animModel: AnimModel = JUMP, duration: Long = 800): AnimatorObject {
+        valueAnim?.let { if (it.isRunning) return this }
 
         //Singleton
         if (animAnimator == null) animAnimator = AnimAnimator(duration)
@@ -35,12 +37,14 @@ class AnimatorObject {
             BLINKER -> animAnimator?.playBlinkerAnim(fabAnimator!!)
             SHAKE -> animAnimator?.playShakeAnim(fabAnimator!!)
         }
+
+        return this
     }
 
     fun setColoring(colorModel: ColorModel = ColorModel.BG, duration: Long = 800,
-                    colorRange: IntArray = intArrayOf(Color.MAGENTA, Color.RED)) {
+                    colorRange: IntArray = intArrayOf(Color.MAGENTA, Color.RED)): AnimatorObject {
 
-        valueColor?.let { if (it.isRunning) return }
+        valueColor?.let { if (it.isRunning) return this }
 
         correctedRange =
                 if (colorRange.size <= 1) intArrayOf(Color.MAGENTA, colorRange[colorRange.size])
@@ -53,28 +57,36 @@ class AnimatorObject {
             ColorModel.ICON -> colorAnimator?.playIconTint(fabAnimator!!)
             ColorModel.BG -> colorAnimator?.playBgTint(fabAnimator!!)
         }
+
+        return this
     }
 
 
-    fun start() {
+    fun start(): AnimatorObject {
         valueAnim?.startAnimation()
         valueColor?.startAnimation()
+
+        return this
     }
 
-    fun stopColoring(colorModel: ColorModel = ColorModel.BG, colorOperation: Int = Color.MAGENTA) {
+    fun stopColoring(colorModel: ColorModel = ColorModel.BG, colorOperation: Int = Color.MAGENTA): AnimatorObject {
         valueColor?.stopAnimation()
         colorAnimator?.stopColoring(fabAnimator!!, colorModel, colorOperation)
 
         valueColor = null
         colorAnimator = null
+
+        return this
     }
 
-    fun stopAnimation() {
+    fun stopAnimation(): AnimatorObject {
         valueAnim?.stopAnimation()
         animAnimator?.stopAnimation(fabAnimator!!)
 
         valueAnim = null
         animAnimator = null
+
+        return this
     }
 
     private fun ValueAnimator.stopAnimation() {

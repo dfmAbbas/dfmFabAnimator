@@ -45,35 +45,35 @@ public class JavaView extends Fragment {
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animatorObject1.create(fab_1);
-                animatorObject1.setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA});
-                animatorObject1.setAnimation(AnimModel.SHAKE, 800);
-                animatorObject1.start();
+                animatorObject1.create(fab_1)
+                        .setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA})
+                        .setAnimation(AnimModel.SHAKE, 800)
+                        .start();
 
-                animatorObject2.create(fab_2);
-                animatorObject2.setColoring(ColorModel.BG, 400, new int[]{Color.MAGENTA, Color.RED});
-                animatorObject2.start();
+                animatorObject2.create(fab_2)
+                        .setColoring(ColorModel.BG, 400, new int[]{Color.MAGENTA, Color.RED})
+                        .start();
 
-                animatorObject3.create(fab_3);
-                animatorObject3.setAnimation(AnimModel.JUMP, 800);
-                animatorObject3.start();
+                animatorObject3.create(fab_3)
+                        .setAnimation(AnimModel.JUMP, 800)
+                        .start();
 
-                animatorObject4.create(fab_4);
-                animatorObject4.setColoring(ColorModel.ICON, 400, new int[]{Color.WHITE, Color.BLACK});
-                animatorObject4.start();
+                animatorObject4.create(fab_4)
+                        .setColoring(ColorModel.ICON, 400, new int[]{Color.WHITE, Color.BLACK})
+                        .start();
 
-                animatorObject5.create(fab_5);
-                animatorObject5.setColoring(ColorModel.BG, 800, new int[]{Color.MAGENTA, Color.BLACK});
-                animatorObject5.setAnimation(AnimModel.BLINKER, 800);
-                animatorObject5.start();
+                animatorObject5.create(fab_5)
+                        .setColoring(ColorModel.BG, 800, new int[]{Color.MAGENTA, Color.BLACK})
+                        .setAnimation(AnimModel.BLINKER, 800)
+                        .start();
             }
         });
 
         btn_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA);
-                animatorObject1.stopAnimation();
+                animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
+                        .stopAnimation();
 
                 animatorObject2.stopColoring(ColorModel.BG, Color.BLACK);
 
@@ -81,8 +81,8 @@ public class JavaView extends Fragment {
 
                 animatorObject4.stopColoring(ColorModel.ICON, Color.BLACK);
 
-                animatorObject5.stopColoring(ColorModel.BG, Color.BLACK);
-                animatorObject5.stopAnimation();
+                animatorObject5.stopColoring(ColorModel.BG, Color.BLACK)
+                        .stopAnimation();
             }
         });
     }
