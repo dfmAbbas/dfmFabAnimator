@@ -3,7 +3,7 @@
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/okabbas/FabAnimator)
 [![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/okabbas/FabAnimator)
 
-This library is for adding smooth animation and animators to the FloatingActionButton library android.
+###### This library is for adding smooth animation and coloring to the FloatingActionButton library android.
 
 
 <img src="assets/kotlin.gif"> <img src="assets/java.gif">
