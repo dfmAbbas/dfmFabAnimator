@@ -39,9 +39,8 @@ animatorObject1.create(fab_1)
         .start()
  
 //for stop
-animatorObject1.stopColoring() //optional
+animatorObject1.stopColoring() // if needed & optional
         .stopAnimation() // if needed & optional
-        .stopColoring() // if needed & optional
  
 //So easy :) I love Kotlin :)
 
@@ -60,7 +59,6 @@ animatorObject1.create(fab_1)
 //for stop
 animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
         .stopAnimation()
-        .stopColoring();
 ```
 
 ## Advanced API :
