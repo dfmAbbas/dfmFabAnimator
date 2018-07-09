@@ -1,7 +1,7 @@
-## FabAnimator 
-[![](https://jitpack.io/v/dfmAbbas/dfmFabAnimator.svg)](https://jitpack.io/#dfmAbbas/dfmFabAnimator)
-[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dfmAbbas/dfmFabAnimator)
-[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/dfmAbbas/dfmFabAnimator)
+## animator
+[![](https://jitpack.io/v/dfmabbas/animator.svg)](https://jitpack.io/#dfmabbas/animator)
+[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dfmabbas/animator)
+[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/dfmabbas/animator)
 
 ###### This library is for adding smooth animation and coloring to the FloatingActionButton library android.
 
@@ -14,7 +14,7 @@ Add to your root build.gradle :
 ```Groovy
 allprojects {
   repositories {
-      maven { url 'https://jitpack.io' } // add this line to repositories 
+      maven { url 'https://jitpack.io' }
     }
   }
 ```
@@ -22,7 +22,7 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.dfmAbbas:dfmFabAnimator:1.0.3'
+    implementation 'com.github.dfmabbas:animator:v1.0.4'
 }
 ```
 
@@ -34,13 +34,13 @@ val animatorObject1 = AnimatorObject()
  
 //for config and start
 animatorObject1.create(fab_1)
-        .setColoring() // if needed & optional
-        .setAnimation() // if needed & optional
+        .setColoring()              // if needed & optional
+        .setAnimation()             // if needed & optional
         .start()
  
 //for stop
-animatorObject1.stopColoring() // if needed & optional
-        .stopAnimation() // if needed & optional
+animatorObject1.stopColoring()      // if needed & optional
+        .stopAnimation()            // if needed & optional
  
 //So easy :) I love Kotlin :)
 
@@ -64,15 +64,15 @@ animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
 ## Advanced API :
 
 ##### In `Kotlin`:
-###### [Sample code written with Kotlin](sample/src/main/java/com/github/dfmabbas/sample/KotlinView.kt).
+###### [Sample code written with Kotlin](sample/src/main/java/com/github/dfmabbas/sample/KotlinView.kt) .
 
 ##### In `Java`:
-###### [Sample code written with Java](sample/src/main/java/com/github/dfmabbas/sample/JavaView.java).
+###### [Sample code written with Java](sample/src/main/java/com/github/dfmabbas/sample/JavaView.java) .
 
 ## License
     MIT License
 
-    Copyright (c) 2018 Abbas Naghdi (@dfmAbbas)
+    Copyright (c) 2018 Abbas Naghdi (@dfmabbas)
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal

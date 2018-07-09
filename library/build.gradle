@@ -6,15 +6,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 def mini_api = 15
 def compile_api = 27
 def target_api = 26
-def build_api = '27.0.3'
-def version_code = 103
-def version_name = '1.0.3'
+def version_code = 104
+def version_name = '1.0.4'
 def support_lib = '27.1.1'
 
 android {
     compileSdkVersion compile_api
-    buildToolsVersion build_api
-
     defaultConfig {
         minSdkVersion mini_api
         targetSdkVersion target_api
@@ -43,12 +40,12 @@ task makeJar(type: Copy) {
     from('build/intermediates/bundles/release/')
     into('build/outputs/')
     include('classes.jar')
-    rename('classes.jar', 'FabAnimator.jar')
+    rename('classes.jar', 'animator.jar')
     into('release/')
 }
 
 task clearJar(type: Delete) {
-    delete 'build/libs/FabAnimator.jar'
+    delete 'build/libs/animator.jar'
 }
 
 makeJar.dependsOn(clearJar, build)

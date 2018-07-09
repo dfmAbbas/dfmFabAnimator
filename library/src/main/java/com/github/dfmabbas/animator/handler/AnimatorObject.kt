@@ -1,12 +1,12 @@
-package com.github.dfmabbas.fabanimator.handler
+package com.github.dfmabbas.animator.handler
 
 import android.animation.ValueAnimator
 import android.graphics.Color
 import android.support.design.widget.FloatingActionButton
 import com.github.dfmabbas.anim.AnimModel
-import com.github.dfmabbas.fabanimator.anim.AnimAnimator
-import com.github.dfmabbas.fabanimator.color.ColorAnimator
-import com.github.dfmabbas.fabanimator.color.ColorModel
+import com.github.dfmabbas.animator.anim.AnimAnimator
+import com.github.dfmabbas.animator.color.ColorAnimator
+import com.github.dfmabbas.animator.color.ColorModel
 
 class AnimatorObject {
     private var colorAnimator: ColorAnimator? = null

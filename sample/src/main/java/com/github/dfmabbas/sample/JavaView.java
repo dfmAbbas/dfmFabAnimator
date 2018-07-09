@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.github.dfmabbas.anim.AnimModel;
-import com.github.dfmabbas.fabanimator.color.ColorModel;
-import com.github.dfmabbas.fabanimator.handler.AnimatorObject;
+import com.github.dfmabbas.animator.color.ColorModel;
+import com.github.dfmabbas.animator.handler.AnimatorObject;
 
 public class JavaView extends Fragment {
 

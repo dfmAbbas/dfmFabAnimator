@@ -1,4 +1,4 @@
-package com.github.dfmabbas.fabanimator.anim
+package com.github.dfmabbas.animator.anim
 
 import android.animation.ValueAnimator
 import android.support.design.widget.FloatingActionButton

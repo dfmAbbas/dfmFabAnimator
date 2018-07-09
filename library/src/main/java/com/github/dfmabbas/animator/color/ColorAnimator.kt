@@ -1,4 +1,4 @@
-package com.github.dfmabbas.fabanimator.color
+package com.github.dfmabbas.animator.color
 
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator

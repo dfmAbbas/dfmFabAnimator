@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.github.dfmabbas.anim.AnimModel
-import com.github.dfmabbas.fabanimator.color.ColorModel
-import com.github.dfmabbas.fabanimator.handler.AnimatorObject
+import com.github.dfmabbas.animator.color.ColorModel
+import com.github.dfmabbas.animator.handler.AnimatorObject
 import kotlinx.android.synthetic.main.fragment_kotlin.*
 
 class KotlinView : Fragment() {

@@ -5,14 +5,12 @@ apply plugin: 'kotlin-android-extensions'
 def mini_api = 15
 def compile_api = 27
 def target_api = 26
-def build_api = '27.0.3'
-def version_code = 103
-def version_name = '1.0.3'
+def version_code = 104
+def version_name = '1.0.4'
 def support_lib = '27.1.1'
 
 android {
     compileSdkVersion compile_api
-    buildToolsVersion build_api
     defaultConfig {
         applicationId "com.github.dfmabbas.sample"
         minSdkVersion mini_api
