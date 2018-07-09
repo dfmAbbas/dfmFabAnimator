@@ -14,7 +14,7 @@ android {
     compileSdkVersion compile_api
     buildToolsVersion build_api
     defaultConfig {
-        applicationId "com.github.okabbas.FabAnimator.Sample"
+        applicationId "com.github.dfmabbas.sample"
         minSdkVersion mini_api
         targetSdkVersion target_api
         versionCode version_code
