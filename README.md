@@ -1,7 +1,7 @@
 ## FabAnimator 
-[![](https://jitpack.io/v/okabbas/FabAnimator.svg)](https://jitpack.io/#okabbas/FabAnimator)
-[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/okabbas/FabAnimator)
-[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/okabbas/FabAnimator)
+[![](https://jitpack.io/v/dfmAbbas/dfmFabAnimator.svg)](https://jitpack.io/#dfmAbbas/dfmFabAnimator)
+[![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dfmAbbas/dfmFabAnimator)
+[![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/dfmAbbas/dfmFabAnimator)
 
 ###### This library is for adding smooth animation and coloring to the FloatingActionButton library android.
 
@@ -22,7 +22,7 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.okabbas:FabAnimator:1.0.2'
+    implementation 'com.github.dfmAbbas:dfmFabAnimator:1.0.3'
 }
 ```
 
@@ -64,15 +64,15 @@ animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
 ## Advanced API :
 
 ##### In `Kotlin`:
-###### [Sample code written with Katlin](Sample/src/main/java/com/github/okabbas/FabAnimator/Sample/KotlinView.kt).
+###### [Sample code written with Kotlin](sample/src/main/java/com/github/dfmabbas/sample/KotlinView.kt).
 
 ##### In `Java`:
-###### [Sample code written with Java](Sample/src/main/java/com/github/okabbas/FabAnimator/Sample/JavaView.java).
+###### [Sample code written with Java](sample/src/main/java/com/github/dfmabbas/sample/JavaView.java).
 
 ## License
     MIT License
 
-    Copyright (c) 2018 Abbas Naghdi
+    Copyright (c) 2018 Abbas Naghdi (@dfmAbbas)
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
