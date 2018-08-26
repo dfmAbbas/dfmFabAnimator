@@ -6,7 +6,7 @@ import android.view.animation.AccelerateInterpolator
 
 
 internal class AnimAnimator(private val duration: Long) {
-    internal fun playJumpAnim(fab: FloatingActionButton): ValueAnimator {
+    fun playJumpAnim(fab: FloatingActionButton): ValueAnimator {
         val scale = fab.scaleX
 
         val valueAnimator = ValueAnimator.ofFloat(scale, scale + 0.2F
@@ -25,7 +25,7 @@ internal class AnimAnimator(private val duration: Long) {
         return valueAnimator
     }
 
-    internal fun playBlinkerAnim(fab: FloatingActionButton): ValueAnimator {
+    fun playBlinkerAnim(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofFloat(fab.alpha, fab.alpha - 1F, fab.alpha)
         valueAnimator.addUpdateListener {
             fab.alpha = it.animatedValue as Float
@@ -39,7 +39,7 @@ internal class AnimAnimator(private val duration: Long) {
         return valueAnimator
     }
 
-    internal fun playShakeAnim(fab: FloatingActionButton): ValueAnimator {
+    fun playShakeAnim(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofFloat(fab.scaleX, fab.scaleX + 0.1F, fab.scaleX
                 , fab.scaleX + 0.1F, fab.scaleX)
 
@@ -56,7 +56,7 @@ internal class AnimAnimator(private val duration: Long) {
         return valueAnimator
     }
 
-    internal fun stopAnimation(fab: FloatingActionButton) {
+    fun stopAnimation(fab: FloatingActionButton) {
         fab.clearAnimation()
     }
 }

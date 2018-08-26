@@ -14,7 +14,7 @@ import android.widget.Button;
 
 import com.github.dfmabbas.anim.AnimModel;
 import com.github.dfmabbas.animator.color.ColorModel;
-import com.github.dfmabbas.animator.handler.AnimatorObject;
+import com.github.dfmabbas.animator.handler.Animator;
 
 public class JavaView extends Fragment {
 
@@ -27,62 +27,51 @@ public class JavaView extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        final FloatingActionButton fab_1 = (FloatingActionButton) view.findViewById(R.id.fab_1);
-        final FloatingActionButton fab_2 = (FloatingActionButton) view.findViewById(R.id.fab_2);
-        final FloatingActionButton fab_3 = (FloatingActionButton) view.findViewById(R.id.fab_3);
-        final FloatingActionButton fab_4 = (FloatingActionButton) view.findViewById(R.id.fab_4);
-        final FloatingActionButton fab_5 = (FloatingActionButton) view.findViewById(R.id.fab_5);
+        final FloatingActionButton fab_1 = view.findViewById(R.id.fab_1);
+        final FloatingActionButton fab_2 = view.findViewById(R.id.fab_2);
+        final FloatingActionButton fab_3 = view.findViewById(R.id.fab_3);
+        final FloatingActionButton fab_4 = view.findViewById(R.id.fab_4);
+        final FloatingActionButton fab_5 = view.findViewById(R.id.fab_5);
 
-        Button btn_start = (Button) view.findViewById(R.id.btn_start);
-        Button btn_stop = (Button) view.findViewById(R.id.btn_stop);
+        Button btn_start = view.findViewById(R.id.btn_start);
+        Button btn_stop = view.findViewById(R.id.btn_stop);
 
-        final AnimatorObject animatorObject1 = new AnimatorObject();
-        final AnimatorObject animatorObject2 = new AnimatorObject();
-        final AnimatorObject animatorObject3 = new AnimatorObject();
-        final AnimatorObject animatorObject4 = new AnimatorObject();
-        final AnimatorObject animatorObject5 = new AnimatorObject();
+        final Animator animator1 = new Animator().playOn(fab_1)
+                .setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA})
+                .setAnimation(AnimModel.SHAKE, 800);
+
+        final Animator animator2 = new Animator().playOn(fab_2)
+                .setColoring(ColorModel.BG, 400, new int[]{Color.MAGENTA, Color.RED});
+
+        final Animator animator3 = new Animator().playOn(fab_3)
+                .setAnimation(AnimModel.JUMP, 800);
+
+        final Animator animator4 = new Animator().playOn(fab_4)
+                .setColoring(ColorModel.ICON, 400, new int[]{Color.WHITE, Color.BLACK});
+
+        final Animator animator5 = new Animator().playOn(fab_5)
+                .setColoring(ColorModel.BG, 800, new int[]{Color.MAGENTA, Color.BLACK})
+                .setAnimation(AnimModel.BLINKER, 800);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animatorObject1.create(fab_1)
-                        .setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA})
-                        .setAnimation(AnimModel.SHAKE, 800)
-                        .start();
-
-                animatorObject2.create(fab_2)
-                        .setColoring(ColorModel.BG, 400, new int[]{Color.MAGENTA, Color.RED})
-                        .start();
-
-                animatorObject3.create(fab_3)
-                        .setAnimation(AnimModel.JUMP, 800)
-                        .start();
-
-                animatorObject4.create(fab_4)
-                        .setColoring(ColorModel.ICON, 400, new int[]{Color.WHITE, Color.BLACK})
-                        .start();
-
-                animatorObject5.create(fab_5)
-                        .setColoring(ColorModel.BG, 800, new int[]{Color.MAGENTA, Color.BLACK})
-                        .setAnimation(AnimModel.BLINKER, 800)
-                        .start();
+                animator1.start();
+                animator2.start();
+                animator3.start();
+                animator4.start();
+                animator5.start();
             }
         });
 
         btn_stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
-                        .stopAnimation();
-
-                animatorObject2.stopColoring(ColorModel.BG, Color.BLACK);
-
-                animatorObject3.stopAnimation();
-
-                animatorObject4.stopColoring(ColorModel.ICON, Color.BLACK);
-
-                animatorObject5.stopColoring(ColorModel.BG, Color.BLACK)
-                        .stopAnimation();
+                animator1.stop();
+                animator2.stop();
+                animator3.stop();
+                animator4.stop();
+                animator5.stop();
             }
         });
     }

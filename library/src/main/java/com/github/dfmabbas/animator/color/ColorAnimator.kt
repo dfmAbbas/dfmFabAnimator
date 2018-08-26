@@ -7,37 +7,36 @@ import android.support.design.widget.FloatingActionButton
 
 
 internal class ColorAnimator(private val duration: Long, private val colorRange: IntArray) {
-    internal fun playBgTint(fab: FloatingActionButton): ValueAnimator {
+    fun playBgTint(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofObject(ArgbEvaluator(), *colorRange.toTypedArray())
 
         valueAnimator.duration = duration
         valueAnimator.repeatCount = ValueAnimator.INFINITE
         valueAnimator.repeatMode = ValueAnimator.REVERSE
 
-        valueAnimator.addUpdateListener(ValueAnimator.AnimatorUpdateListener {
+        valueAnimator.addUpdateListener {
             fab.backgroundTintList = ColorStateList.valueOf(it.animatedValue as Int)
-        })
+        }
 
         return valueAnimator
     }
 
-    internal fun playIconTint(fab: FloatingActionButton): ValueAnimator {
+    fun playIconTint(fab: FloatingActionButton): ValueAnimator {
         val valueAnimator = ValueAnimator.ofObject(ArgbEvaluator(), *colorRange.toTypedArray())
 
         valueAnimator.duration = duration
         valueAnimator.repeatCount = ValueAnimator.INFINITE
         valueAnimator.repeatMode = ValueAnimator.REVERSE
 
-        valueAnimator.addUpdateListener(ValueAnimator.AnimatorUpdateListener {
+        valueAnimator.addUpdateListener {
             fab.setColorFilter(it.animatedValue as Int)
-        })
+        }
         return valueAnimator
     }
 
 
-    internal fun stopColoring(fab: FloatingActionButton, colorModel: ColorModel, colorOperation: Int) {
-        if (colorModel == ColorModel.BG)
-            fab.backgroundTintList = ColorStateList.valueOf(colorOperation)
-        else fab.clearColorFilter()
+    fun stopColoring(fab: FloatingActionButton, fabColor: ColorStateList) {
+        fab.backgroundTintList = fabColor
+        fab.clearColorFilter()
     }
 }

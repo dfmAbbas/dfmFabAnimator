@@ -22,43 +22,32 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.dfmabbas:animator:v1.0.4'
+    implementation 'com.github.dfmabbas:animator:v1.1.0'
 }
 ```
 
 ## Simple API (default) :
 
 ##### In `Kotlin`:
-```Groovy
-val animatorObject1 = AnimatorObject()
- 
-//for config and start
-animatorObject1.create(fab_1)
-        .setColoring()              // if needed & optional
-        .setAnimation()             // if needed & optional
-        .start()
- 
-//for stop
-animatorObject1.stopColoring()      // if needed & optional
-        .stopAnimation()            // if needed & optional
- 
-//So easy :) I love Kotlin :)
+```kotlin
+val animator1 = Animator().playOn(fab_1)
+        .setColoring()              						//adjust the animation for color (optional)
+        .setAnimation()             						//adjust animation for movement (optional)
 
+animator1.start()
+animator1.stop()
+
+//So easy :) I love Kotlin :)
 ```
 
 ##### In `Java` :
-```Groovy
-AnimatorObject animatorObject1 = new AnimatorObject();
- 
-//for config and start
-animatorObject1.create(fab_1)
+```java
+AnimatorObject animator1 = new AnimatorObject().playOn(fab_1)
         .setColoring(ColorModel.BG, 1500, new int[]{Color.BLACK, Color.LTGRAY, Color.MAGENTA})
-        .setAnimation(AnimModel.SHAKE, 800)
-        .start();
- 
-//for stop
-animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
-        .stopAnimation()
+        .setAnimation(AnimModel.SHAKE, 800);
+
+animator1.start()
+animator1.stop()
 ```
 
 ## Advanced API :
@@ -91,4 +80,3 @@ animatorObject1.stopColoring(ColorModel.BG, Color.MAGENTA)
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
-

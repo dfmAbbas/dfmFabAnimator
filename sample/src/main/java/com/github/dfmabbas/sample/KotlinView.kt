@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.github.dfmabbas.anim.AnimModel
 import com.github.dfmabbas.animator.color.ColorModel
-import com.github.dfmabbas.animator.handler.AnimatorObject
+import com.github.dfmabbas.animator.handler.Animator
 import kotlinx.android.synthetic.main.fragment_kotlin.*
 
 class KotlinView : Fragment() {
@@ -20,48 +20,37 @@ class KotlinView : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val animatorObject1 = AnimatorObject()
-        val animatorObject2 = AnimatorObject()
-        val animatorObject3 = AnimatorObject()
-        val animatorObject4 = AnimatorObject()
-        val animatorObject5 = AnimatorObject()
+        val animator1 = Animator().playOn(fab_1)
+                .setColoring(colorRange = intArrayOf(Color.BLACK, Color.LTGRAY, Color.MAGENTA), duration = 1500)
+                .setAnimation(animModel = AnimModel.SHAKE)
+
+        val animator2 = Animator().playOn(fab_2)
+                .setColoring(duration = 400)
+
+        val animator3 = Animator().playOn(fab_3)
+                .setAnimation(AnimModel.JUMP, 800)
+
+        val animator4 = Animator().playOn(fab_4)
+                .setColoring(ColorModel.ICON, 400, colorRange = intArrayOf(Color.WHITE, Color.BLACK))
+
+        val animator5 = Animator().playOn(fab_5)
+                .setColoring(colorRange = intArrayOf(Color.MAGENTA, Color.BLACK))
+                .setAnimation(animModel = AnimModel.BLINKER)
 
         btn_start.setOnClickListener {
-            animatorObject1.create(fab_1)
-                    .setColoring(colorRange = intArrayOf(Color.BLACK, Color.LTGRAY, Color.MAGENTA), duration = 1500)
-                    .setAnimation(animModel = AnimModel.SHAKE)
-                    .start()
-
-            animatorObject2.create(fab_2)
-                    .setColoring(duration = 400)
-                    .start()
-
-            animatorObject3.create(fab_3)
-                    .setAnimation(AnimModel.JUMP, 800)
-                    .start()
-
-            animatorObject4.create(fab_4)
-                    .setColoring(ColorModel.ICON, 400, colorRange = intArrayOf(Color.WHITE, Color.BLACK))
-                    .start()
-
-            animatorObject5.create(fab_5)
-                    .setColoring(colorRange = intArrayOf(Color.MAGENTA, Color.BLACK))
-                    .setAnimation(animModel = AnimModel.BLINKER)
-                    .start()
+            animator1.start()
+            animator2.start()
+            animator3.start()
+            animator4.start()
+            animator5.start()
         }
 
         btn_stop.setOnClickListener {
-            animatorObject1.stopColoring()
-                    .stopAnimation()
-
-            animatorObject2.stopColoring(colorOperation = Color.BLACK)
-
-            animatorObject3.stopAnimation()
-
-            animatorObject4.stopColoring(colorModel = ColorModel.ICON)
-
-            animatorObject5.stopColoring()
-                    .stopAnimation()
+            animator1.stop();
+            animator2.stop();
+            animator3.stop();
+            animator4.stop();
+            animator5.stop();
         }
     }
 }
