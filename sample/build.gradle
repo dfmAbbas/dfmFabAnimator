@@ -3,10 +3,10 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 def mini_api = 15
-def compile_api = 27
-def target_api = 26
-def version_code = 104
-def version_name = '1.0.4'
+def compile_api = 28
+def target_api = 28
+def version_code = 110
+def version_name = '1.1.0'
 def support_lib = '27.1.1'
 
 android {
