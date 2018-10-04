@@ -3,11 +3,12 @@ package com.github.dfmabbas.animator.handler
 import android.animation.ValueAnimator
 import android.content.res.ColorStateList
 import android.graphics.Color
-import android.support.design.widget.FloatingActionButton
-import com.github.dfmabbas.anim.AnimModel
 import com.github.dfmabbas.animator.anim.AnimAnimator
+import com.github.dfmabbas.animator.anim.AnimModel
 import com.github.dfmabbas.animator.color.ColorAnimator
 import com.github.dfmabbas.animator.color.ColorModel
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+
 
 class Animator {
     private var colorAnimator: ColorAnimator? = null

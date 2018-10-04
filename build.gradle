@@ -1,14 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.2.61'
+    ext.kotlin_version = '1.2.71'
     repositories {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
     }
 }
 
@@ -17,12 +16,6 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
-    }
-}
-
-tasks.whenTaskAdded { task ->
-    if (task.name == "lint") {
-        task.enabled = false
     }
 }
 

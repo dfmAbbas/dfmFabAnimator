@@ -1,4 +1,4 @@
-package com.github.dfmabbas.anim
+package com.github.dfmabbas.animator.anim
 
 enum class AnimModel() {
     JUMP,

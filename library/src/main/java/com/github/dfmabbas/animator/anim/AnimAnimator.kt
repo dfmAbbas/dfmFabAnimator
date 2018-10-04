@@ -1,8 +1,8 @@
 package com.github.dfmabbas.animator.anim
 
 import android.animation.ValueAnimator
-import android.support.design.widget.FloatingActionButton
 import android.view.animation.AccelerateInterpolator
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 internal class AnimAnimator(private val duration: Long) {

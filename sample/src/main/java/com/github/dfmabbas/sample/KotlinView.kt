@@ -3,11 +3,11 @@ package com.github.dfmabbas.sample
 
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.github.dfmabbas.anim.AnimModel
+import androidx.fragment.app.Fragment
+import com.github.dfmabbas.animator.anim.AnimModel
 import com.github.dfmabbas.animator.color.ColorModel
 import com.github.dfmabbas.animator.handler.Animator
 import kotlinx.android.synthetic.main.fragment_kotlin.*

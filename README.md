@@ -1,4 +1,4 @@
-## animator
+## Animator
 [![](https://jitpack.io/v/dfmabbas/animator.svg)](https://jitpack.io/#dfmabbas/animator)
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://github.com/dfmabbas/animator)
 [![API](https://img.shields.io/badge/API-15%2B-blue.svg?style=flat)](https://github.com/dfmabbas/animator)
@@ -21,7 +21,7 @@ allprojects {
 Add the dependency : 
 ```Groovy
 dependencies {
-    implementation 'com.github.dfmabbas:animator:v1.1.0'
+    implementation 'com.github.dfmabbas:animator:v1.1.2'
 }
 ```
 

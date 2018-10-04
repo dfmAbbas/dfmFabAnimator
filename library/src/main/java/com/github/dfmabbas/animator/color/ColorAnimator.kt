@@ -3,7 +3,7 @@ package com.github.dfmabbas.animator.color
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
 import android.content.res.ColorStateList
-import android.support.design.widget.FloatingActionButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 internal class ColorAnimator(private val duration: Long, private val colorRange: IntArray) {
