@@ -5,10 +5,16 @@
 
 ###### This library is for adding smooth animation and coloring to the FloatingActionButton library android.
 
+[![Funding for faster development](https://img.shields.io/badge/Donate-IRAN-green)](https://idpay.ir/oky2abbas)
+**Funding for faster development**  (`only works with Iranian bank cards`) 
+Payment gateway: https://idpay.ir/oky2abbas
+
 <img src="assets/kotlin.gif"> <img src="assets/java.gif">
 
 
+
 ## Getting Started :
+
 Add to your root build.gradle :
 ```Groovy
 allprojects {
