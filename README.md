@@ -7,8 +7,8 @@
 
 
 
-[![Funding for faster development](https://img.shields.io/badge/Donate-IRAN-green)](https://idpay.ir/oky2abbas)
-**Funding for faster development**  (`only works with Iranian bank cards`) 
+[![](https://img.shields.io/badge/Donate-IRAN-green.svg)](https://idpay.ir/oky2abbas)
+**Funding for faster development**  (`only works with Iranian bank cards`)
 **Payment gateway**: https://idpay.ir/oky2abbas
 
 
